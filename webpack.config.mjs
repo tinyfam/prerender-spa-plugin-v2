@@ -16,32 +16,8 @@ const CHROME_PATH = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
 
 export default {
     mode: process.env.NODE_ENV || 'development',
-    // stats: {
-    //     preset: 'normal',
-    //     colors: true,
-    //     modules: true,
-    //     timings: true,
-    //     reasons: true
-    // },
-    // infrastructureLogging: {
-    //     level: 'info',  // 'none' | 'error' | 'warn' | 'info' | 'log' | 'verbose'
-    //     debug: true
-    // },
     entry: {
         'index': './src/pages/contract/index/index.mjs',
-        'ai-lawyer': './src/pages/contract/lawyer/index.mjs',
-        'pay/handwritten': './src/pages/pay/handwritten/index.mjs',
-        'ai-contract-management': './src/pages/contract/management/index.mjs',
-        'draw-signature': './src/pages/signature/draw-signature.mjs',
-        'type-signature': './src/pages/signature/type-signature.mjs',
-        'email-signatures': './src/pages/email/email-signature.mjs',
-        'invoice-signature': './src/pages/invoice/index.mjs',
-        'pdf-signatures': './src/pages/pdf/index/index.mjs',
-        'ai-contract-summary': './src/pages/summary/index.mjs',
-        'logo-signature': './src/pages/signature/logo-signature.mjs',
-        'handwritten-signature': './src/pages/signature/handwritten-signature.mjs',
-        'calligraphy-signature': './src/pages/signature/calligraphy-signature.mjs',
-        'cursive-signature': './src/pages/signature/cursive-signature.mjs',
         'privacy': './src/pages/privacy/privacy.mjs',
         'feedback': './src/pages/feedback/feedback.mjs',
     },
@@ -104,71 +80,6 @@ export default {
             chunks: ['index'],
         }),
         new HtmlWebpackPlugin({
-            template: './src/type-signature.html',
-            filename: 'type-signature/index.html',
-            chunks: ['type-signature'],
-        }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/email-signatures.html',
-        //     filename: 'email-signatures/index.html',
-        //     chunks: ['email-signatures'],
-        // }),
-        new HtmlWebpackPlugin({
-            template: './src/ai-lawyer.html',
-            filename: 'ai-lawyer/index.html',
-            chunks: ['ai-lawyer'],
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/pay/handwritten.html',
-            filename: 'pay/handwritten/index.html',
-            chunks: ['pay/handwritten'],
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/ai-contract-summary.html',
-            filename: 'ai-contract-summary/index.html',
-            chunks: ['ai-contract-summary'],
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/ai-contract-management.html',
-            filename: 'ai-contract-management/index.html',
-            chunks: ['ai-contract-management'],
-        }),
-        // new HtmlWebpackPlugin({
-        //     template: './src/invoice-signature.html',
-        //     filename: 'invoice-signature/index.html',
-        //     chunks: ['invoice-signature'],
-        // }),
-        new HtmlWebpackPlugin({
-            template: './src/pdf-signatures.html',
-            filename: 'pdf-signatures/index.html',
-            chunks: ['pdf-signatures'],
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/draw-signature.html',
-            filename: 'draw-signature/index.html',
-            chunks: ['draw-signature'],
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/ai-logo-signature.html',
-            filename: 'ai-logo-signature/index.html',
-            chunks: ['logo-signature'],
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/ai-handwritten-signature-generator.html',
-            filename: 'ai-handwritten-signature-generator/index.html',
-            chunks: ['handwritten-signature'],
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/ai-handwritten-signature-generator.html',
-            filename: 'ai-calligraphy-signature-generator/index.html',
-            chunks: ['calligraphy-signature'],
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/cursive-signature-generator.html',
-            filename: 'cursive-signature-generator/index.html',
-            chunks: ['cursive-signature'],
-        }),
-        new HtmlWebpackPlugin({
             template: './src/privacy.html',
             filename: 'privacy/index.html',
             chunks: ['privacy'],
@@ -182,19 +93,6 @@ export default {
             staticDir: path.join(__dirname, 'dist'),
             routes: [
                 '/index.html',
-                '/ai-lawyer/index.html',
-                '/pay/handwritten/index.html',
-                // '/email-signatures/index.html',
-                '/ai-contract-summary/index.html',
-                '/ai-contract-management/index.html',
-                // '/invoice-signature/index.html',
-                '/pdf-signatures/index.html',
-                '/draw-signature/index.html',
-                '/type-signature/index.html',
-                '/ai-logo-signature/index.html',
-                '/ai-handwritten-signature-generator/index.html',
-                '/ai-calligraphy-signature-generator/index.html',
-                '/cursive-signature-generator/index.html',
                 '/privacy/index.html',
                 '/feedback/index.html',
             ],
